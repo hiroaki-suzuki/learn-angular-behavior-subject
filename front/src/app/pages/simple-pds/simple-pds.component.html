@@ -1,0 +1,14 @@
+<mat-card class="container">
+  <mat-card-content>
+    <div *ngFor="let user of users$ | async" class="current-user">
+      ID：{{ user.id }}<br>
+      名前：{{ user.name }}<br>
+      ユーザ名：{{ user.username }}<br>
+      メール：{{ user.email }}<br>
+    </div>
+
+    <button mat-raised-button color="accent" (click)="fetch()">
+      Cから始まるユーザーを取得
+    </button>
+  </mat-card-content>
+</mat-card>

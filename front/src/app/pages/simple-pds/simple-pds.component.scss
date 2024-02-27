@@ -1,0 +1,14 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+
+  .current-user {
+    margin: 20px 0;
+  }
+
+  button {
+    display: block;
+    margin: 20px auto 0;
+    width: 300px;
+  }
+}

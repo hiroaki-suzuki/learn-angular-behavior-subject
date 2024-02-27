@@ -32,4 +32,14 @@ describe('ホームコンポーネント', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('li:nth-child(1) a').href).toMatch(/\/stateful$/);
   });
+
+  it('Simple PDSページへのリンクが表示されていること', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('li:nth-child(2) a').textContent).toEqual('Simple PDS');
+  });
+
+  it(`Simple PDSページのURLが '/stateful' であること`, () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('li:nth-child(2) a').href).toMatch(/\/pds$/);
+  });
 });
