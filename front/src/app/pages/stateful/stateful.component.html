@@ -1,0 +1,14 @@
+<mat-card class="container">
+  <mat-card-content>
+    <span class="current-count">現在のカウント：{{ count$ | async }}</span>
+
+    <div class="button-group">
+      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)="increment()">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" aria-label="Example icon button with a minus one icon" (click)="decrement()">
+        <mat-icon>exposure_neg_1</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
