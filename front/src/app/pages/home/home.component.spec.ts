@@ -42,4 +42,14 @@ describe('ホームコンポーネント', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('li:nth-child(2) a').href).toMatch(/\/pds$/);
   });
+
+  it('PDS + CQSページへのリンクが表示されていること', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('li:nth-child(3) a').textContent).toEqual('PDS + CQS');
+  });
+
+  it(`PDS + CQSページのURLが '/pds-cqs' であること`, () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('li:nth-child(3) a').href).toMatch(/\/pds-cqs$/);
+  });
 });

@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Todo</mat-label>
+    <input matInput [formControl]="inputTodo" placeholder="Todoを入力する" (keydown.shift.enter)="addTodo()">
+    <mat-hint>Shift + EnterでTodoを追加</mat-hint>
+  </mat-form-field>
+
+  <div class="uncompleted-todo-list">
+    <h2>未完了のTodo</h2>
+    <mat-list>
+      <mat-list-item *ngFor="let todo of state.uncompletedTodos | async" class="todo-item">
+        <mat-checkbox (click)="setTodoCompleted(todo.id)" [checked]="todo.completed">
+          <span class="todo-title {{todo.completed ? 'todo-completed': ''}}">{{ todo.title }}</span>
+        </mat-checkbox>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="completed-todo-list">
+    <h2>完了済のTodo</h2>
+    <mat-list>
+      <mat-list-item *ngFor="let todo of state.completedTodos | async" class="todo-item">
+        <mat-checkbox (click)="setTodoCompleted(todo.id)" [checked]="todo.completed">
+          <span class="todo-title {{todo.completed ? 'todo-completed': ''}}">{{ todo.title }}</span>
+        </mat-checkbox>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

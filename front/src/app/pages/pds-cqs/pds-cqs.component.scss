@@ -1,0 +1,28 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  h2 {
+    margin: 40px 0 0;
+    padding: 0 30px;
+    font-size: 0.8rem;
+  }
+
+  .todo-list {
+
+    .todo-completed {
+      color: #a0a0a0;
+    }
+  }
+}
+
+:host ::ng-deep {
+  .mdc-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background {
+    border-color: #dedede !important;
+    background-color: #dedede !important;
+  }
+}
