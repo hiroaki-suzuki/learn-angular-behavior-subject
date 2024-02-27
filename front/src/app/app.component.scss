@@ -1,0 +1,16 @@
+.container, .header-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-container {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.container {
+  margin-top: 40px;
+}

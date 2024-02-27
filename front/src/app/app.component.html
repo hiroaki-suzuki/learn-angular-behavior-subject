@@ -1,5 +1,12 @@
 <main>
   <mat-toolbar color="primary">
-    <span>Learn Angular BehaviorSubject</span>
+    <div class="header-container">
+      <h1>
+        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Learn Angular BehaviorSubject</a>
+      </h1>
+    </div>
   </mat-toolbar>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </main>
